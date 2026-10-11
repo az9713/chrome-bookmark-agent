@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmark Agent",
+  "version": "2.0.0",
+  "description": "Read, search and manage Chrome bookmarks locally from your coding agents.",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "bookmarks",
+    "nativeMessaging",
+    "storage",
+    "alarms"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Bookmark Agent"
+  },
+  "options_page": "options.html",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyM+vVflNRF+5R1vYOIUwzPys1+aRl8xnW7KA60XG9gD6DKpKWXn2zSRA2b4UfbyeX6e1ltp0v9uYQfOJyQ0OW34gEZUdLaT1uWxuHwPpKvUi3v5t/H/v2e+uKImsYHfV9HMjxh30Q9BCHfm3mzE1TKVjWgqCK5rirIpkXNVTXZGNo51NPXT0nCCadrmqA13WX2C+N3BGgXfb2ff3r9RC7f2WfwBt424VE5X0Gbcy4+oCC6J/51Ftfoxw23RqeaqEYuzoVtk+KsBrEhzLcZJJVxmWHhRMDHrcTPa3hApCrmt1IkpsNIy1MU4LjRifEQpqgiYXDaCyhjLEc73v9Y63rQIDAQAB"
+}

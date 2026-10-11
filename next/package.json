@@ -1,0 +1,37 @@
+{
+  "name": "bookmark-agent-app",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Local Chrome bookmarks for humans and coding agents",
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "bin": { "bookmark-agent": "dist/cli.js" },
+  "scripts": {
+    "build": "tsc && tsc -p ui/tsconfig.json && node scripts/build.mjs && vite build",
+    "test": "node --test test/*.test.mjs",
+    "start": "node dist/server.js",
+    "cli": "node dist/cli.js",
+    "mcp": "node dist/mcp.js",
+    "init-local": "node dist/config.js --init",
+    "setup": "node scripts/register.mjs",
+    "uninstall": "node scripts/register.mjs --uninstall",
+    "check": "tsc --noEmit && tsc -p ui/tsconfig.json"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "ws": "^8.18.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.1.24",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/ws": "^8.18.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0"
+  }
+}

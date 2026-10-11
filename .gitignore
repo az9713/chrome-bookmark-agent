@@ -1,0 +1,31 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+# Credentials, native registration, backups, and private browser data
+.runtime/
+.env
+.env.*
+!.env.example
+bookmarks*.json
+bookmarks*.html
+backups/
+# Local validation artifacts and machine-specific live checks
+output/
+test-results/
+playwright-report/
+/next/scripts/live-*.mjs
+*.log
+*.zip
+*.exe
+*.pdb
+.ignore/
+.DS_Store
+Thumbs.db
+# Earlier prototype and local activation notes; primary implementation is next/
+/src/
+/extension/
+/scripts/
+/test/
+/ui/
+/docs/
+/PROJECT.md

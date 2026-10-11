@@ -1,0 +1,21 @@
+{
+  "name": "bookmark-agent",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Local Chrome bookmarks for humans and coding agents",
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "bin": { "bookmark-agent": "next/dist/cli.js" },
+  "scripts": {
+    "prepare:app": "npm --prefix next ci --ignore-scripts --no-audit --no-fund",
+    "build": "npm --prefix next run build",
+    "test": "npm --prefix next test",
+    "start": "node next/dist/server.js",
+    "cli": "node next/dist/cli.js",
+    "mcp": "node next/dist/mcp.js",
+    "init-local": "node next/dist/config.js --init",
+    "setup": "node next/scripts/register.mjs",
+    "uninstall": "node next/scripts/register.mjs --uninstall",
+    "check": "npm --prefix next run check"
+  }
+}
